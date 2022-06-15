@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+  
+    var add = (x,y) => x + y;
+    console.log(add(4,5));
+
+    //짝홀 나누기
+    var arr = [1,2,3,4,5,6,7,8,9,10];
+    var evenArr=[];
+    var oddArr=[];
+    for(i=0; i<arr.length; i++){
+        if(arr[i]%2==0)
+            evenArr.push(arr[i]);
+        else
+            oddArr.push(arr[i]);
+    }
+
+    console.log(evenArr);
+    console.log(oddArr);
+
+
+    //람다를 사용해서 해보기
+    console.log(arr.filter(x => x%2==0));
+    console.log(arr.filter(x => x%2==1));
+    //전체 출력
+    arr.forEach(x => console.log(x));
+
+
+
+
+
+</script>

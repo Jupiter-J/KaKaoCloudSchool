@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <form action="calculator">
+        값1 : <input type="text" id="num1">
+        값2 : <input type="text" id="num2">
+        <br>
+        결과: <span id="output"></span>
+    </form>
+    <button id="plus" onclick="addNum()"> + </button> 
+    <button id="minus" onclick="minusNum()"> - </button> 
+    <button id="multi" onclick="multiNum()"> X </button>
+
+
+
+</body>
+</html>
+
+<script>
+
+// document.getElementById("plus").addEventListener('click', addNum);
+// document.getElementById("minus").addEventListener('click', minusNum);
+// document.getElementById("multi").addEventListener('click', mulitNum);
+    
+
+
+    function addNum(){
+        console.log("kkkk")
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        result = num1 + num2;
+
+        document.getElementById("output").innerHTML = result;
+
+    }
+
+
+    function minusNum(num1, num2){
+       result= `${num1} + ${num2}`;
+        return result;
+    }
+
+    function mulitNum(num1, num2){
+        num1 * num2;
+       return result;
+    }
+
+
+   
+    document.getElementById("output").innerHTML = result;
+
+
+</script>
