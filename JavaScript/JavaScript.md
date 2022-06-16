@@ -85,6 +85,9 @@ new 연산자를 사용하여 호출
 ### 객체 메서드
 * computed property : 함수밖에서 변수를 선언했을때 함수안의 변수를 지칭할수 있게 []를 사용한다. , 계산식도 가능
 * Object.assign() : 객체 복제
+    동일하게 복제하기 위해서는
+    * const newUser = Object.assign({}, user);
+         {}: 빈객체는 초기값이다, USER가 {}안으로 복제되어 들어옴  
 * Object.entries() : 키/값 배열 반환
 * Object.fromEntries() : 키/값 배열을 객체로
 
