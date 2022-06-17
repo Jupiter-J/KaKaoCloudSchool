@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+        값1 : <input type="text" id="xvalue">
+        값2 : <input type="text" id="yvalue">
+        <br>
+
+
+    <button id="plus" onclick="goAdd()"> + </button> 
+    <button id="minus" onclick="gominus()"> - </button> 
+    <button id="multi" onclick="gomulti()"> X </button>
+
+    결과: <span id="result"></span>
+    
+</body>
+</html>
+
+<script>
+
+    function goAdd(){
+        let x = parseInt(document.getElementById("xvalue").value);
+        let y = parseInt(document.getElementById("yvalue"),value);
+        let result = x+y;
+        document.getElementById("result").innerHTML = "<h1>" + result + "</h1>";
+    }
+
+
+    function goSum(sel)
+    {
+        let x = parseInt(document.getElementById("xvalue").value);
+        let y = parseInt(document.getElementById("yvalue").value);
+        let result = x +y ;
+        if(sel == '1')
+        result = x +y ;
+        else if (sel == '2')
+        result = x-y;
+
+
+        document.getElementById("result").innerHTML =  "<h1>" + result + "</h1>";
+    }
+    
+
+
+
+
+
+</script>
