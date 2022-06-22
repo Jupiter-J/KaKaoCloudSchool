@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="value" id="value1" value="1"><br>
+    <input type="text" name="value" id="value2" value="2"><br>
+    <input type="text" name="value" id="value3" value="3"><br>
+    <input type="text" name="value" id="value4" value="4"><br>
+    <input type="text" name="value" id="value5" value="5"><br>
+    <input type="text" name="value" id="value6" value="6"><br>
+    <input type="text" name="value" id="value7" value="7"><br>
+    <input type="text" name="value" id="value8" value="8"><br>
+    <input type="text" name="value" id="value9" value="9"><br>
+    <input type="text" name="value" id="value10" value="10"><br>
+    ------------------------------------- <br>
+    <div id="result"></div>
+    <button type="button" onclick="goIdAdd()">합계구하기(id) </button>
+    <button type="button" onclick="goNameAdd()">합계구하기(name)</button>
+
+
+</body>
+</html>
+
+<script>
+
+    function goIdAdd(){
+       var result =0;
+        for(i=1; i<=10; i++){
+            result += parseInt(document.getElementById("value" + i).value);
+        }
+        document.getElementById("result").innerHTML = `<h3>${result}</h3>`
+    }
+
+    function goNameAdd(){
+        var result=0;
+        let valList = document.getElementsByName("value");
+        for(i=0; i<valList.length; i++){
+            result += parseInt(valList[i].value);
+        }
+        document.getElementById("result").innerHTML= `<h3>${result}</h3>`
+    }
+
+
+</script>
