@@ -24,4 +24,7 @@
 %>
 <h3>결과는 <%=result%> 입니다</h3>
 
+<<<<<<< HEAD
 {"result":"success, "value":result}
+=======
+>>>>>>> 422b38d5ba26f9614c6ce757484986fffccc4fc8
