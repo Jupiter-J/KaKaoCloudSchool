@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  window.onload = function(){
+    init();
+  }
+
+  function init(){
+    let url = "json1.jsp";
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onload = function (){
+        let result = JSON.parse(this.responseText);
+        console.log(result);
+        let totalCnt = result.totalCnt;
+        let data = result.data;
+
+        let tbody = document.getElementById("tbody");
+        data.forEach((item)=>{
+            let row = tbody.insertRow(tbody.rows.length);
+            row.insertCell(0).innerHTML=item.id;
+            row.insertCell(1).innerHTML=item.title;
+            row.insertCell(2).innerHTML=item.writer;
+            row.insertCell(3).innerHTML=item.hit;
+        });
+    }
+
+    xhttp.open("GET", url, true);
+    xhttp.send();
+  }
+
+
+</script>
