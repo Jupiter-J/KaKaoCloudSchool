@@ -20,4 +20,6 @@ public class Student3 {
         int c = staticCall("5번");
         Student3 s = new Student3();
     }
+
+    // 1-> 4-> 5-> 2-> 3
 }

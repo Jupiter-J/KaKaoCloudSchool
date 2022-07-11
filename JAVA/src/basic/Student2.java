@@ -15,6 +15,7 @@ public class Student2 {
     public void getSScore(int k){ //메소드 오버로딩딩
    }
     public static void main(String[] args) {
+        Student2 stud = new Student2();
 
     }
 }
