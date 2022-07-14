@@ -28,7 +28,6 @@ interface Movable {
 
 class Circle extends Shape implements Movable{
  private int radius;
-
     Circle(){
     }
 
