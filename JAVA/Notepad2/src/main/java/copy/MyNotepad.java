@@ -1,9 +1,6 @@
-package com.example.notepad2;
+package copy;
 
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -21,12 +18,6 @@ public class MyNotepad extends Application {
     Button openBtn, saveBtn;
     File file;
 
-    //함수로 뺀다 -> printMsg 호출
-    private void printMsg(String msg){
-        Platform.runLater( ()->{
-            textArea.appendText(msg + "\n");
-        });
-    }
     @Override
     public void start(Stage primaryStage) throws IOException {
         //화면을구성하는 전체 판
@@ -66,8 +57,7 @@ public class MyNotepad extends Application {
                 BufferedReader br = new BufferedReader(fr);
                 String line = "";
                 while((line= br.readLine()) != null){
-                    //동기화 - runnable 인터페이스로 구현한 객체가 온다
-                    printMsg(line);
+                    textArea.appendText(line + "\n");
                 }
                 br.close();
             } catch (FileNotFoundException ex) {
