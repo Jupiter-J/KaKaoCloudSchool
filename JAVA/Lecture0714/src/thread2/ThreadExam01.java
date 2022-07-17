@@ -15,7 +15,7 @@ class ThreadEx_01_2 implements Runnable{
     public void run() {
         for(int i=0; i<5; i++){
             System.out.println(Thread.currentThread().getName());  //runabl로부터 구현한거지 아직 스레드가 아니다!
-                                                            //현재 실행중인  스레드 실행
+                                    //현재 실행중인  스레드 실행
         }
     }
 }
@@ -31,6 +31,6 @@ public class ThreadExam01 {
 
         t1.start();
         t2.start();
-        System.out.println("main thread 종료료");
+        System.out.println("main thread 종료");
     }
 }
