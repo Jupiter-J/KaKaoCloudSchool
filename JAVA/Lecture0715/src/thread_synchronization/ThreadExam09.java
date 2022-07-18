@@ -5,7 +5,6 @@ class Account{
 
     //계좌 잔고
     private int balance = 1000;
-
     public int getBalance() {
         return balance;
     }

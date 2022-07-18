@@ -92,8 +92,6 @@ public class MyNotepad extends Application {
             }
         });
 
-
-
         FlowPane flowPane = new FlowPane();
         flowPane.setPadding(new Insets(10,10,10,10));
         flowPane.setColumnHalignment(HPos.CENTER);
@@ -112,7 +110,6 @@ public class MyNotepad extends Application {
         primaryStage.setTitle("메모장");
         primaryStage.show();
     }
-
     public static void main(String[] args) {
         launch();
     }

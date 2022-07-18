@@ -1,13 +1,11 @@
 package thread;
 
 class MyThread extends Thread{
-
     @Override
     public void run() {
         System.out.println("Hello!");
     }
 }
-
 
 class MyThread2 implements Runnable{
     @Override
