@@ -1,4 +1,4 @@
-package com.example.book.mission1;
+package com.example.book.basic;
 
 import java.io.IOException;
 import java.io.PrintWriter;

@@ -1,4 +1,4 @@
-package com.example.book.store;
+package com.example.book.mission;
 
 
 import javafx.application.Application;
@@ -29,7 +29,7 @@ public class BookStore extends Application {
         textArea = new TextArea();
         root.setCenter(textArea); //화면 센터에 textarea 를 붙인다
 
-        connBtn = new Button("Library 서버 접속"); ///접속 버튼 만듬
+        connBtn = new Button("BookSearch"); ///접속 버튼 만듬
         connBtn.setPrefSize(150,40);
         connBtn.setOnAction(e ->{
             textArea.clear();
@@ -60,7 +60,6 @@ public class BookStore extends Application {
         flowPane.getChildren().add(connBtn); //버튼을 붙인다
 
         root.setBottom(flowPane); //아래에 플로우팬을 붙인다
-
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();

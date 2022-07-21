@@ -1,4 +1,4 @@
-package com.example.book.mission1;
+package com.example.book.basic;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
