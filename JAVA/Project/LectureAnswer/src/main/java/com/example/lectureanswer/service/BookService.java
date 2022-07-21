@@ -19,6 +19,7 @@ public class BookService {
 		// for, if 로직처리가 일반적으로 나오는데
 		// Database 처리를 해야 해요!
 		ArrayList<BookVO> result = dao.select(keyword);
+		System.out.println("service" + result);
 		return result;
 	}
 	

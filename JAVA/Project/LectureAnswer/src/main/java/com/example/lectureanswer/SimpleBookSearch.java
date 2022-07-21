@@ -44,10 +44,14 @@ public class SimpleBookSearch extends Application {
 		selectBtn.setPrefSize(100, 60);
 		selectBtn.setOnAction(e -> {
 			textarea.clear();
+
 			ArrayList<BookVO> result =
 					service.bookSearchByKeyword(input.getText());
 			// result를 이용해서 화면에 출력!
-			System.out.println(result);
+			System.out.println("main"+ result);
+			for (BookVO book : result){
+				textarea.appendText(book.getBauthor() + book.getBdate() + book.getBisbn());
+			}
 		});
 
 		input = new TextField();

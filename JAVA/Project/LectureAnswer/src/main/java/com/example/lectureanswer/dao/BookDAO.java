@@ -38,11 +38,9 @@ public class BookDAO {
 			
 			while(rs.next()) {
 				BookVO tmp = new BookVO();
-				
 				tmp.setBtitle(rs.getString("btitle"));
 				tmp.setBauthor(rs.getString("bauthor"));
 				tmp.setBisbn(rs.getString("bisbn"));
-
 				list.add(tmp);
 			}
 			
@@ -57,6 +55,7 @@ public class BookDAO {
 				e2.printStackTrace();
 			}
 		}
+		System.out.println("DAO"+ list.toString());
 		return list;
 	}
 }

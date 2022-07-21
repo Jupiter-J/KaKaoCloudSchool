@@ -60,7 +60,16 @@ public class BookVO {
 	public void setBauthor(String bauthor) {
 		this.bauthor = bauthor;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "BookVO{" +
+				"bisbn='" + bisbn + '\'' +
+				", btitle='" + btitle + '\'' +
+				", bdate='" + bdate + '\'' +
+				", bpage=" + bpage +
+				", bprice=" + bprice +
+				", bauthor='" + bauthor + '\'' +
+				'}';
+	}
 }
