@@ -1,0 +1,9 @@
+module com.example.lectureanswer {
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires java.sql;
+
+
+    opens com.example.lectureanswer to javafx.fxml;
+    exports com.example.lectureanswer;
+}
