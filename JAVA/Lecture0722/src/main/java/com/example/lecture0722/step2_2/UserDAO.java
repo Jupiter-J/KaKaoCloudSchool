@@ -1,17 +1,11 @@
-package com.example.lecture0722.step2;
+package com.example.lecture0722.step2_2;
 
 import java.sql.*;
 
-public class UserDAO {
+public abstract class UserDAO {
 
-    //todo: 똑같은 기능을 메소드로 생성하여 묶는다 - 리펙토링(유지보수성 up!)
-    private Connection getConnection() throws ClassNotFoundException, SQLException{
-        Class.forName("com.mysql.cj.jdbc.Driver"); //forName: drive 부터 로딩한다
-        //2. 데이터베이스 연결결
-        String jdbc_URL = "jdbc:mysql://localhost:3306/sqldb?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true";
-        Connection con = DriverManager.getConnection(jdbc_URL,"root","kim8480848");
-        return con;
-    }
+    //todo: private -> protected로 변경 : 다른 패키지가 사용할 수 있도록 변경한다
+    protected abstract Connection getConnection() throws ClassNotFoundException, SQLException;
     public void insert(User user) throws ClassNotFoundException, SQLException{
 
         Connection con = getConnection();

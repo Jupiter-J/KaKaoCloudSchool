@@ -1,4 +1,4 @@
-package com.example.lecture0722.step1;
+package com.example.lecture0722.step2;
 
 public class User {
     //todo: 데이터베이스 컬럼명을 동일하게 작성

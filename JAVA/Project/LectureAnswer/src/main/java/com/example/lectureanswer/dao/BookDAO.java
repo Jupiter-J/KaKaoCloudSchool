@@ -11,6 +11,7 @@ import com.example.lectureanswer.vo.BookVO;
 public class BookDAO {
 
 	public BookDAO() {
+		//객체가 만들어질 때 사용
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");	
 			System.out.println("드라이버 로딩 성공!");			
@@ -18,7 +19,8 @@ public class BookDAO {
 			// TODO: handle exception
 		}
 	}
-	
+
+	//TODO: 도서 조회
 	public ArrayList<BookVO> select(String keyword) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -55,7 +57,45 @@ public class BookDAO {
 				e2.printStackTrace();
 			}
 		}
-		System.out.println("DAO"+ list.toString());
+		System.out.println("DAO = "+ list);
 		return list;
+	}
+
+	//TODO: 도서 삭제
+	public int delete(String bisbn){
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		//ResultSet rs = null;
+		int result = 0;
+
+		try {
+			String jdbcURL = "jdbc:mysql://localhost:3306/mission?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true";
+			con = DriverManager.getConnection(jdbcURL,"root","kim8480848");
+
+			String sql = "delete from book where bisbn = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, bisbn);
+
+			result = pstmt.executeUpdate();
+
+			if ( result == 1 ) {
+				System.out.println("삭제 성공");
+			} else {
+				System.out.println("삭제 실패");
+			}
+		} catch (Exception e3) {
+			// TODO: handle exception
+		}finally {
+			try {
+			//	rs.close();
+				pstmt.close();
+				con.close();
+			} catch (Exception e4) {
+				e4.printStackTrace();
+			}
+		}
+		System.out.println("DAO = "+ result);
+		return result;
+
 	}
 }

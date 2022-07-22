@@ -1,4 +1,4 @@
-package com.example.lecture0722.step1;
+package com.example.lecture0722.step2;
 
 import java.sql.SQLException;
 

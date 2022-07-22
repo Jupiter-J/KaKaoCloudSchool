@@ -1,10 +1,10 @@
-package com.example.lecture0722.step4;
+package com.example.lecture0722.step5;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class NUserDAO implements ConnectionMaker{
+public class NUserDAO implements ConnectionMaker {
 
     @Override
     public Connection makeConnection() throws ClassNotFoundException, SQLException {

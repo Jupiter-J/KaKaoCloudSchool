@@ -1,15 +1,24 @@
-package com.example.lecture0722.step4;
+package com.example.lecture0722.step5;
+
+import com.example.lecture0722.step5.ConnectionMaker;
 
 import java.sql.SQLException;
 
 public class UserMain {
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        //UserDAO를 사용하면서 데이터베이스를 연결하는 NUserDAO만 변경하여 사용가능해졌다
-        //추상클래스는 인스턴스 생성이 불가능 상위클래스 내용에 + 하위클래스가 내용을 추가해서 사용
-        //클래스를 재사용하는 방법
-        //todo: change
-        UserDAO dao = new UserDAO();
+
+        //todo: connection을 얻어오는 인터페이스 객체를 넣어줘야 한다
+        /**내가 판매한 인터페이스 객체에 자기가 구현한 놈을 넣어주기만 하면 된다
+         클래스간의 의존성은 없지만 코드가 실행될때 객체끼리의 의존성은 존재하게됨
+         (인스턴스 의존성 & 객체 의존성이라고 한다) 한 객체에 다른 객체를 밀어 넣어주는것 DI
+         의존성을 내가 강제로 주입해서 만들어 주는 것
+
+         그래서 상속기반이 아닌 인터페이스 구현 기반으로 가게된다! 클래스간의 의존성을 낮추기 위해서
+         */
+        ConnectionMaker connectionMaker = new NUserDAO();
+
+        UserDAO dao = new UserDAO(connectionMaker);
         User user = new User();
         user.setId("1");
         user.setName("홍길동");
