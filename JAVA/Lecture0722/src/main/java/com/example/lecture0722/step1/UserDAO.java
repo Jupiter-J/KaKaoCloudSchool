@@ -8,9 +8,9 @@ public class UserDAO {
     // 외부 리소스를 사용하기 때문에 예기치못할 에러를 잡기위해 try-catch 가 필요하다 하지만 그때마다 사용하기 힘듬 => throw
     public void insert(User user) throws ClassNotFoundException, SQLException{
 
-        //1. driver 로드
+        //1. driver 로드 -> 인터페이스에 넣었음
         Class.forName("com.mysql.cj.jdbc.Driver"); //forName: drive 부터 로딩한다
-        //2. 데이터베이스 연결결
+        //2. 데이터베이스 연결
         String jdbc_URL = "jdbc:mysql://localhost:3306/sqldb?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true";
         Connection con = DriverManager.getConnection(jdbc_URL,"root","kim8480848");
 

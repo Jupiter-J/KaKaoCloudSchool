@@ -3,7 +3,6 @@ package com.example.lecture0722.step2;
 import java.sql.*;
 
 public class UserDAO {
-
     //todo: 똑같은 기능을 메소드로 생성하여 묶는다 - 리펙토링(유지보수성 up!)
     private Connection getConnection() throws ClassNotFoundException, SQLException{
         Class.forName("com.mysql.cj.jdbc.Driver"); //forName: drive 부터 로딩한다
@@ -12,7 +11,6 @@ public class UserDAO {
         return con;
     }
     public void insert(User user) throws ClassNotFoundException, SQLException{
-
         Connection con = getConnection();
         String sql = "INSERT INTO users VALUES(?,?,?)";
 

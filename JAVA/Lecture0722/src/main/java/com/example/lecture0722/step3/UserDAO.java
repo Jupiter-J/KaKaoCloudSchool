@@ -17,6 +17,7 @@ public class UserDAO {
     public UserDAO(){
         simpleConnectionMaker = new SimpleConnectionMaker();
     }
+
     public void insert(User user) throws ClassNotFoundException, SQLException{
 
         Connection con = simpleConnectionMaker.makeNewConnection();

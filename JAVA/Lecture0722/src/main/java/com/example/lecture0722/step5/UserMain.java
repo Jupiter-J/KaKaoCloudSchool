@@ -15,7 +15,7 @@ public class UserMain {
          의존성을 내가 강제로 주입해서 만들어 주는 것
 
          그래서 상속기반이 아닌 인터페이스 구현 기반으로 가게된다! 클래스간의 의존성을 낮추기 위해서
-         */
+         */                                 //main에서 구현체의 객체를 생성
         ConnectionMaker connectionMaker = new NUserDAO();
 
         UserDAO dao = new UserDAO(connectionMaker);

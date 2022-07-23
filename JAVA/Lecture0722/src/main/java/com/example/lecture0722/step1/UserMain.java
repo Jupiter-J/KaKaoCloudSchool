@@ -3,7 +3,7 @@ package com.example.lecture0722.step1;
 import java.sql.SQLException;
 
 public class UserMain {
-
+                                                //try-catch를 안씀
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         //todo: 서비스 없이 메인에서 직접 로직 처리한다
 

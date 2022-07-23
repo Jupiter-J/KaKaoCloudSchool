@@ -3,11 +3,10 @@ package com.example.lecture0722.step2_2;
 import java.sql.*;
 
 public abstract class UserDAO {
-
     //todo: private -> protected로 변경 : 다른 패키지가 사용할 수 있도록 변경한다
     protected abstract Connection getConnection() throws ClassNotFoundException, SQLException;
-    public void insert(User user) throws ClassNotFoundException, SQLException{
 
+    public void insert(User user) throws ClassNotFoundException, SQLException{
         Connection con = getConnection();
         String sql = "INSERT INTO users VALUES(?,?,?)";
 

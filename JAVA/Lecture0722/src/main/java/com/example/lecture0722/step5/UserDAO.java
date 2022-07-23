@@ -11,7 +11,7 @@ public class UserDAO {
     /**내가 직접 만드는게 아니라 ConnectionMaker 인터페이스를 구현한 객체를 가져온다
      내가 객체를 DAO에서 만들지 않고 받아서 사용하도록 한다  */
     public UserDAO(ConnectionMaker connectionMaker){
-        connectionMaker = new NUserDAO();
+        this.connectionMaker = connectionMaker;
     }
     public void insert(User user) throws ClassNotFoundException, SQLException{
 

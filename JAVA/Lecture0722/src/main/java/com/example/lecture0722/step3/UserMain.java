@@ -11,7 +11,7 @@ public class UserMain {
         //todo: change
         UserDAO dao = new UserDAO();
         User user = new User();
-        user.setId("1");
+        user.setId("2");
         user.setName("홍길동");
         user.setPassword("test1234");
 
