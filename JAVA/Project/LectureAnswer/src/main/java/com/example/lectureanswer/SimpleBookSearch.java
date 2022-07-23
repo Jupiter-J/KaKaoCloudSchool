@@ -64,7 +64,7 @@ public class SimpleBookSearch extends Application {
 			ResultSet rs = null;
 			
 			try {
-				String jdbcURL = "jdbc:mysql://localhost:3306/mission?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true";
+				String jdbcURL = "jdbc:mysql://localhost:3306/book?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true";
 				con = DriverManager.getConnection(jdbcURL,"root","kim8480848");
 				
 				String sql = "delete from book where bisbn = ?";

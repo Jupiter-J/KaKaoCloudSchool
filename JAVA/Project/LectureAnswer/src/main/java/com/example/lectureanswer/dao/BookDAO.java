@@ -25,8 +25,8 @@ public class BookDAO {
 		ResultSet rs = null;
 		ArrayList<BookVO> list = null;
 		try {
-			String jdbcURL = "jdbc:mysql://localhost:3306/mission?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true";
-			con = DriverManager.getConnection(jdbcURL,"root","kim8480848");
+			String jdbcURL = "jdbc:mysql://localhost:3306/book?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true";
+			con = DriverManager.getConnection(jdbcURL,"root","jupiter*");
 
 			String sql = "select btitle,bauthor,bisbn from book where btitle like ?";
 			pstmt = con.prepareStatement(sql);
