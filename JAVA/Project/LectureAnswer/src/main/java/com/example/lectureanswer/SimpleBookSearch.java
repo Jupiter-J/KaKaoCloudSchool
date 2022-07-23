@@ -40,6 +40,7 @@ public class SimpleBookSearch extends Application {
 		bottom.setPrefHeight(40);
 		bottom.setPrefWidth(Double.MAX_VALUE);
 
+		//TODO: 도서 조회
 		selectBtn = new Button("Keyword검색");
 		selectBtn.setPrefSize(100, 60);
 		selectBtn.setOnAction(e -> {
@@ -48,33 +49,39 @@ public class SimpleBookSearch extends Application {
 			ArrayList<BookVO> result =
 					service.bookSearchByKeyword(input.getText());
 			// result를 이용해서 화면에 출력!
-			System.out.println("main"+ result);
+			System.out.println("main = "+ result);
 			for (BookVO book : result){
-				textarea.appendText(book.getBauthor() + book.getBdate() + book.getBisbn());
+				textarea.appendText("제목: "+book.getBtitle()+ "\t 저자: " +book.getBauthor() +"\t"+ "ISBN: "+book.getBisbn() +"\t \n");
 			}
 		});
 
+		//TODO: 도서 삭제
 		input = new TextField();
 		input.setPrefSize(40, 60);
 		deleteBtn = new Button("ISBN으로 삭제");
 		deleteBtn.setPrefSize(100, 60);
 		deleteBtn.setOnAction(e -> {
+			int result = service.bookDeleteByISBN(textarea.getText());
+			if(result > 0) {
+				textarea.appendText("삭제 되었습니다");
+			}
+			textarea.appendText("잘못된 값입니다");
 			Connection con = null;
 			PreparedStatement pstmt = null;
 			ResultSet rs = null;
-			
+
 			try {
 				String jdbcURL = "jdbc:mysql://localhost:3306/book?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true";
 				con = DriverManager.getConnection(jdbcURL,"root","kim8480848");
-				
+
 				String sql = "delete from book where bisbn = ?";
 				pstmt = con.prepareStatement(sql);
 				pstmt.setString(1, input.getText());
-				
+
 				int count = pstmt.executeUpdate();
-				
+
 				textarea.clear();
-				
+
 				if ( count == 1 ) {
 					textarea.appendText("[삭제성공] \n");
 				} else {
@@ -82,7 +89,7 @@ public class SimpleBookSearch extends Application {
 				}
 			} catch (Exception e2) {
 				// TODO: handle exception
-			}				
+			}
 		});
 
 		bottom.setLeft(selectBtn);
