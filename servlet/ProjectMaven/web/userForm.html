@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div> 아래는 form 태그에요!</div>
+    <!-- action: 입력된 내용을 가지고 요청을 보낼 서버쪽 프로그램 -->
+    <!-- method: 생략가능. 만약 생략되면 "GET"
+                클라이언트가 서버에 Request를 보내는 방법을 지정 -->
+    <form action="index.html" method="GET">
+        ID: <input type="text" name="userID"><br>
+        PW: <input type="password" name="userPW"><br>
+        <input type="submit" value="서버로 데이터 전송">
+    </form>
+</body>
+</html>
