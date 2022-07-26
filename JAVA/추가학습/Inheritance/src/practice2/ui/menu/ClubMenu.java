@@ -1,12 +1,16 @@
 package practice2.ui.menu;
 
+import practice2.ui.console.ClubConsole;
+
 import java.util.Scanner;
 
 public class ClubMenu {
     private Scanner scanner;
+    private ClubConsole console; //클럽콘솔을 호출하기 위해
 
     public ClubMenu(){
         this.scanner = new Scanner(System.in);
+        this.console = new ClubConsole();
     }
 
     public void show(){
@@ -18,22 +22,22 @@ public class ClubMenu {
 
             switch ( inputNumber){
                 case 1 :
-                    //console.register();
+                    console.register();
                     break;
                 case 2 :
-                    //
+                    console.findAll();
                     break;
                 case 3 :
-                    //
+                    console.findById();
                     break;
                 case 4 :
-                    //
+                    console.findByName();
                     break;
                 case 5 :
-                    //
+                    console.modify();
                     break;
                 case 6 :
-                    //
+                    console.remove();
                     break;
                 case 0 :
                     //
@@ -45,9 +49,9 @@ public class ClubMenu {
     }
 
     private void displayMenu(){
-        System.out.println("*******************");
+        System.out.println("---------------------");
         System.out.println("ClubMenu");
-        System.out.println("*******************");
+        System.out.println("---------------------");
         System.out.println("1. Register");
         System.out.println("2. Find(All)");
         System.out.println("3. Find(ID)");

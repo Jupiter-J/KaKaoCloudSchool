@@ -43,6 +43,10 @@ public class TravelClub {
         return id;
     }
 
+    public String getIntro() {
+        return intro;
+    }
+
     public void setClubName(String clubName) {
         if (clubName.length()<MINIMUM_NAME_LENGTH){
             System.out.println("이름 "+MINIMUM_NAME_LENGTH+"글자 이상 적으세요");
@@ -51,9 +55,7 @@ public class TravelClub {
         this.clubName = clubName;
     }
 
-    public String getIntro() {
-        return intro;
-    }
+
 
     public void setIntro(String intro) {
         if (intro.length()<MINIMUM_INTRO_LENGTH){
