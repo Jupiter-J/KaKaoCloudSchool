@@ -42,11 +42,11 @@ public class LoginController extends HttpServlet {
 
         //todo: 출력하기 위해 로그인에 성공하면 VO객체를 JSP에게 전달
         if(member != null){
-            RequestDispatcher rd = req.getRequestDispatcher("/book/member/loginSuccess.jsp");
+            RequestDispatcher rd = req.getRequestDispatcher("/member/loginSuccess.jsp");
             req.setAttribute("member",member); //결과 데이터를 붙여서 surblet -> jsp로 붙여서 보낸다
             rd.forward(req, resp); //servlet이 jsp를 찾아서 실행(forward)
         }else{
-            resp.sendRedirect("/book/member/loginFail.html");
+            resp.sendRedirect("/member/loginFail.html");
         }
 
     }

@@ -15,7 +15,8 @@ public class MemberDAO {
     private DataSource ds;
 
     public MemberDAO() throws NamingException, ClassNotFoundException {
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysq" +
+                "l.jdbc.Driver");
         Context init = new InitialContext();
         //init을 사용하여 데이터소스를 찾을 수 있다
         ds = (DataSource) init.lookup("java:comp/env/jdbc/MySQLDB"); //object 타입이라 다운캐스팅한다
