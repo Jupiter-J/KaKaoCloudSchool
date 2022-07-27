@@ -35,10 +35,11 @@ public class BookDAO {
             System.out.println("드라이버 로딩 성공");
 
             //2. 실제 데이터베이스에 연결    프로토콜        DBMS   스키마명                         //타임존
-            String jdbcURL = "jdbc:mysql://localhost:3306/sqldb?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false";
+            String jdbcURL = "jdbc:mysql://localhost:3306/bookstore?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false";
             // 접속에 성공하면 Connection 이라는 객체가 생긴다
-            con = DriverManager.getConnection(jdbcURL,"root","kim8480848");
+            con = DriverManager.getConnection(jdbcURL,"root","jupiter*");
             System.out.println("데이터베이스 연결 성공");
+
 
             String sql = "SELECT userID, name, addr FROM usertbl";
             //3. Statement 생성
