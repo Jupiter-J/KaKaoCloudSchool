@@ -35,7 +35,6 @@ public class MemberDAO {
         if (rs.next()) {
             //로그인이 되었다
             member.setName(rs.getString("name"));
-            System.out.println("DAO" + member.getName());
             return member;
         }
         return null;

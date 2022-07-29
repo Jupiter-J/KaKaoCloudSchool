@@ -12,32 +12,33 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserDAO {
+    /**
+     커넥션풀에는 여러개의 Connection 객체가 생성되어 운용되는데, 이를 직접 웹 애플리케이션에서 다루기 힘들기 때문에
+     DataSource라는 개념을 도입하여 사용
+     DataSource는 커넥션 풀을 관리하기 위한 객체
+     */
     private DataSource ds;
 
-    public UserDAO() throws ClassNotFoundException, NamingException {
+    public UserDAO() throws ClassNotFoundException, NamingException{
         Class.forName("com.mysql.jdbc.Driver");
         Context init = new InitialContext();
-        //init을 사용하여 데이터소스를 찾을 수 있다
-        ds = (DataSource) init.lookup("java:comp/env/jdbc/MySQLDB"); //object 타입이라 다운캐스팅한다
-        System.out.println(ds.toString());
+        ds = (DataSource) init.lookup("java:comp/env/jdbc/MySQLDB");
     }
 
     public Member select(Member member) throws SQLException {
         Connection con = ds.getConnection();
-        System.out.println("connection 획득 성공!");
-
+        System.out.println("커넥션 획득");
         String sql = "SELECT * FROM members WHERE id=? AND pw=?";
         PreparedStatement pstmt = con.prepareStatement(sql);
         pstmt.setString(1, member.getId());
         pstmt.setString(2, member.getPw());
 
-        ResultSet rs = pstmt.executeQuery();
-        if (rs.next()) {
-            //로그인이 되었다
-            member.setName(rs.getString("name"));
-            System.out.println("DAO" + member.getName());
+        ResultSet result = pstmt.executeQuery();
+        if (result.next()){
+            member.setName(result.getString("name"));
             return member;
         }
+
         return null;
     }
 

@@ -11,7 +11,6 @@
     <% Member member = (Member)request.getAttribute("member"); %>
     <title>success!</title>
     <%= member.getName() %>님 환영합니다.
-
 </head>
 <body>
 

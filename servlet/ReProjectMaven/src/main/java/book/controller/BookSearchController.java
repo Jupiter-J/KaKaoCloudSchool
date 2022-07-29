@@ -40,12 +40,13 @@ public class BookSearchController extends HttpServlet {
 		if( list != null ) {
 			// 성공
 			// list를 jsp에게 전달해서 결과를 클라이언트에게 전송
-			RequestDispatcher rd = request.getRequestDispatcher("book/bookSearchResult.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/book/bookSearchResult.jsp");
 			request.setAttribute("result", list);
 			rd.forward(request, response);
 		} else {
 			// error
 			// 오류페이지를 만들어서 사용자에게 redirect
+			response.sendRedirect("/book/member/loginFail.html");
 		}
 	}
 
