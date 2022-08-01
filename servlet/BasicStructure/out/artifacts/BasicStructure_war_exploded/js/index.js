@@ -14,6 +14,6 @@ function myFunc(){
     // $("div").text("깔깔깔") 태그사이의 글자를 인자를 이용해서 변환
     // $("#myLi").remove() 아이디 선택자
     // $(".haha")클래스 선택자 .뒤에 붙인다
-    $(".haha").css("background-color", "yellow");
+    //$(".haha").css("background-color", "yellow");
 
 }
