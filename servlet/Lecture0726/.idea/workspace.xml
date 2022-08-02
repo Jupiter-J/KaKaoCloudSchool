@@ -10,12 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70e46b91-e475-426e-a028-dffc1ff929c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ReStudy/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture0725/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture0725/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReStudy/ReProjectMaven/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ReStudy/ReProjectMaven/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReStudy/ReProjectMaven/ReProjectMaven.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReStudy/ReProjectMaven/out/artifacts/ReProjectMaven_Web_exploded/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ReStudy/ReProjectMaven/out/artifacts/ReProjectMaven_Web_exploded/META-INF/context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReStudy/ReProjectMaven/web/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ReStudy/ReProjectMaven/web/META-INF/context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BasicStructure/web/boxOffice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BasicStructure/web/jqueryMethod.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BasicStructure/web/js/boxOffice.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BasicStructure/web/js/jqueryMethod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JAVA/추가학습/Inheritance/out/production/Inheritance/practice2/service/logic/ClubServiceLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JAVA/추가학습/Inheritance/out/production/Inheritance/practice2/service/logic/ClubServiceLogic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JAVA/추가학습/Inheritance/out/production/Inheritance/practice2/ui/console/ClubConsole.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JAVA/추가학습/Inheritance/out/production/Inheritance/practice2/ui/console/ClubConsole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JAVA/추가학습/Inheritance/out/production/Inheritance/practice2/ui/menu/ClubMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JAVA/추가학습/Inheritance/out/production/Inheritance/practice2/ui/menu/ClubMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BasicStructure/out/artifacts/BasicStructure_war_exploded/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../BasicStructure/out/artifacts/BasicStructure_war_exploded/js/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +168,7 @@
       <workItem from="1658800984555" duration="14850000" />
       <workItem from="1658839724700" duration="8204000" />
       <workItem from="1658907614807" duration="281000" />
+      <workItem from="1659329513245" duration="5000" />
     </task>
     <servers />
   </component>
