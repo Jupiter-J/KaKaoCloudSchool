@@ -40,7 +40,7 @@ function getData() {
           },
           dataType: 'json',
           success: function(imgResult) {
-            posterImg.attr('src', imgResult.documents[0].thumbnail_url); //
+            posterImg.attr('src', imgResult.documents[0].thumbnail_url);
           },
           error: function() {
             alert('이미지 검색 실패');
@@ -48,12 +48,13 @@ function getData() {
         });
         posterTd.append(posterImg);
         tr.append(posterTd);
-        let titleTd = $("<td></td>").text(movieList[i]['movieInfo']['peopleNm']);
+        let titleTd = $("<td></td>").text(movieList[i]['movieNm']);
         tr.append(titleTd);
         //////////////////////////////////////////////////////
-        let actorTd = $("<td></td>").text(actorList['peopleNm']);
-        tr.append(actorTd);
+        let actorTd = $("<td></td>");
+
         $.ajax({
+          async:false,
           url: 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json',
           type: 'get',
           data: {
@@ -62,13 +63,17 @@ function getData() {
           },
           timeout: 3000,
           dataType: 'json',
-          success: function(actorResult) {
-            let actorList = actorResult['movieInfoResult']['movieInfo'];
+          success: function(result1) {
+            let actorList = result1['movieInfoResult']['movieInfo']['actors'][0];
+           // console.log(actorList);
+            actorTd.text(actorList['peopleNm']);
           },
           error: function() {
             alert('주연배우 검색 실패');
           }
         });
+        tr.append(actorTd);
+
         let deleteTd = $("<td></td>");
         tr.append(deleteTd);
 
